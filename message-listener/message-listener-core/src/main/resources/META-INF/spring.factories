@@ -1,0 +1,4 @@
+
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.alphabet.message.listener.core.MQAnnotationCoreBeanPostProcess, \
+io.github.alphabet.message.listener.core.MQAutoConfiguration

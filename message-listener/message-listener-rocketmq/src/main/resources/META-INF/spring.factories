@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.alphabet.message.listener.rocketmq.RocketMQAnnotationCoreBeanPost, \
+io.github.alphabet.message.listener.rocketmq.RocketMQServiceThreadContainer, \
+io.github.alphabet.message.listener.rocketmq.RocketMqProducerClient 

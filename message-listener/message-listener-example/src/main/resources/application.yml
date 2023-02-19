@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: message-listener-example
+  profiles:
+    active: dev

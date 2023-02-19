@@ -1,0 +1,15 @@
+#端口号
+server:
+  port: 6011
+  servlet:
+    context-path: /message-listener-example
+
+#base-rocket-driver:
+#  info:
+#    address: 192.168.17.221:30746
+
+message-listener:
+  rocket:
+    address: 121.5.249.204:31746
+    user-name: admin01
+    password: 12345678
