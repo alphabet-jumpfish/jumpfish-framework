@@ -11,7 +11,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>message-listener-rocketmq</artifactId>
+    <artifactId>message-listener-pulsar</artifactId>
 
     <properties>
 

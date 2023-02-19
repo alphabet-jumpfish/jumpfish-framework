@@ -14,6 +14,7 @@ import org.springframework.core.MethodIntrospector;
 import org.springframework.core.OrderComparator;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.AnnotationUtils;
+import org.springframework.util.ObjectUtils;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.AnnotatedElement;
@@ -86,14 +87,11 @@ public class MQAnnotationCoreBeanPostProcess implements InitializingBean, Applic
             Boolean hasStrategy = easyListenerAnnotationBeanPostProcessor.hasStrategy(listener);
             if (hasStrategy) {
                 easyListenerAnnotationBeanPostProcessor.processAssignMQListener(listener, method, bean, beanName);
+            } else {
+                if (!ObjectUtils.isEmpty(listener.topics())) {
+                    easyListenerAnnotationBeanPostProcessor.processMQListener(listener, method, bean, beanName);
+                }
             }
-
-//            } else {
-//                if (!ObjectUtils.isEmpty(listener.topics())) {
-//                    easyListenerAnnotationBeanPostProcessor.processMQListener(listener, method, bean, beanName);
-//                }
-//            }
-
         });
     }
 

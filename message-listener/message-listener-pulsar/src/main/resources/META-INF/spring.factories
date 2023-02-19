@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.alphabet.message.listener.pulsar.PulsarMQAnnotationCoreBeanPost, \
+io.github.alphabet.message.listener.pulsar.PulsarMQServiceThreadContainer, \
+io.github.alphabet.message.listener.pulsar.PulsarMQConsumerThread 

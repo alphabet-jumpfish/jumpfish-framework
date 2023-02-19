@@ -17,12 +17,15 @@
     <modules>
         <module>message-listener-core</module>
         <module>message-listener-rocketmq</module>
+        <module>message-listener-pulsar</module>
         <module>message-listener-example</module>
+        <module>message-listener-starter</module>
     </modules>
 
     <properties>
         <rocketmq.version>4.9.0</rocketmq.version>
         <pulsar.version>2.9.0</pulsar.version>
+        <message.listener.version>1.0.0-RELEASE</message.listener.version>
     </properties>
 
     <dependencies>
@@ -36,6 +39,29 @@
     <dependencyManagement>
 
         <dependencies>
+
+            <!-- identify -->
+            <dependency>
+                <groupId>io.github.alphabet-jumpfish</groupId>
+                <artifactId>message-listener-rocketmq</artifactId>
+                <version>${message.listener.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.alphabet-jumpfish</groupId>
+                <artifactId>message-listener-pulsar</artifactId>
+                <version>${message.listener.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.alphabet-jumpfish</groupId>
+                <artifactId>message-listener-pulsar</artifactId>
+                <version>${message.listener.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.alphabet-jumpfish</groupId>
+                <artifactId>message-listener-core</artifactId>
+                <version>${message.listener.version}</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>io.github.alphabet-jumpfish</groupId>

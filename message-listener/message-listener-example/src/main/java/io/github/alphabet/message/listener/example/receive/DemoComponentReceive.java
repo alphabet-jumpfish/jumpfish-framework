@@ -28,7 +28,7 @@ public class DemoComponentReceive {
     @Scheduled(fixedRate = 2000)
     void rocketDemo() {
         try {
-            rocketMqProducerClient.sendMessage("TEST", "wangjiawen is");
+            rocketMqProducerClient.sendMessage("TEST", "rocketmq message wangjiawen is");
         } catch (MQBrokerException e) {
             e.printStackTrace();
         } catch (RemotingException e) {
@@ -41,7 +41,8 @@ public class DemoComponentReceive {
     }
 
     @MQListener(
-            rocketMQListener = @RocketMQListener(topics = "TEST", subscriptionName = "TEST", concurrency = "1", consumeMessageBatchMaxSize = 100, autoCommitACK = true)
+            topics = "TEST", consumer = "TEST"
+            // rocketMQListener= @RocketMQListener(topics = "TEST", subscriptionName = "TEST", concurrency = "1", consumeMessageBatchMaxSize = 100, autoCommitACK = true)
     )
     public void mbaRocketTopic(ConsumerRecords<String, String> consumerRecords, Acknowledgment acknowledgment) {
 
