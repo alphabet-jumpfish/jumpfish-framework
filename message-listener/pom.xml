@@ -10,6 +10,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <version>1.0.0-RELEASE</version>
     <packaging>pom</packaging>
 
     <artifactId>message-listener</artifactId>
@@ -23,6 +24,7 @@
     </modules>
 
     <properties>
+        <framework.dependencies.version>1.0.0-RELEASE</framework.dependencies.version>
         <rocketmq.version>4.9.0</rocketmq.version>
         <pulsar.version>2.9.0</pulsar.version>
         <message.listener.version>1.0.0-RELEASE</message.listener.version>
@@ -39,6 +41,15 @@
     <dependencyManagement>
 
         <dependencies>
+
+            <!-- framework dependencies pom-->
+            <dependency>
+                <groupId>io.github.alphabet-jumpfish</groupId>
+                <artifactId>framework-dependencies</artifactId>
+                <version>${framework.dependencies.version}</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
 
             <!-- identify -->
             <dependency>
@@ -61,14 +72,10 @@
                 <artifactId>message-listener-core</artifactId>
                 <version>${message.listener.version}</version>
             </dependency>
-
-
             <dependency>
                 <groupId>io.github.alphabet-jumpfish</groupId>
-                <artifactId>framework-dependencies</artifactId>
-                <version>1.0.0-RELEASE</version>
-                <scope>import</scope>
-                <type>pom</type>
+                <artifactId>message-listener-starter</artifactId>
+                <version>${message.listener.version}</version>
             </dependency>
 
             <dependency>
